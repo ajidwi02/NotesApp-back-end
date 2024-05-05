@@ -23,7 +23,7 @@ const addNoteHandlers = (request, h) => {
             noteId: id,
          },
       });
-      response.end(201);
+      response.code(201);
       return response;
    }
 
@@ -114,7 +114,7 @@ const deleteNoteByIdHandler = (request, h) => {
       status: 'fail',
       message: 'Catatan gagal dihapus. Id tidak ditemukan',
    });
-   response.code(400);
+   response.code(404);
    return response;
 };
 
